@@ -13,7 +13,7 @@ class HomeView extends StackedView<HomeViewModel> {
     final pages = [
       HomeViewContent(viewModel), // Home content
       const WalletView(),
-      const HistoryView(),
+      const LoanHistoryView (),
     ];
 
     return Scaffold(

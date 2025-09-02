@@ -5,9 +5,21 @@ import 'package:stacked1_app/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
+import '../../../app/app.router.dart';
+
 class HomeViewModel extends BaseViewModel {
   final _dialogService = locator<DialogService>();
   final _bottomSheetService = locator<BottomSheetService>();
+  final _navigationService = locator<NavigationService>();
+
+  //function
+  void onOmbaMkopoTapped() {
+    _navigationService.navigateTo(Routes.requestLoanView);
+  }
+
+  void onFanyaMalipoTapped() {
+    _navigationService.navigateTo(Routes.walletView);
+  }
 
   // Counter logic
   int _counter = 0;

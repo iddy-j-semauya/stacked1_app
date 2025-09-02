@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'home_viewmodel.dart';
-import '../../common/ui_helpers.dart';
-import '../../common/app_colors.dart';
 
 class HomeViewContent extends StatelessWidget {
   final HomeViewModel viewModel;
@@ -94,14 +92,14 @@ class HomeViewContent extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Mkopo: TZS 60,000',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -109,13 +107,13 @@ class HomeViewContent extends StatelessWidget {
                             Text('50%'),
                           ],
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8),
                         LinearProgressIndicator(
                           value: 0.5,
-                          backgroundColor: const Color(0xFFFFFFFF),
-                          color: const Color(0xFF2E7D32),
+                          backgroundColor: Color(0xFFFFFFFF),
+                          color: Color(0xFF2E7D32),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -166,8 +164,8 @@ class HomeViewContent extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
+              child: const Padding(
+                padding: EdgeInsets.symmetric(
                   horizontal: 20.0,
                   vertical: 16.0,
                 ),
@@ -176,7 +174,7 @@ class HomeViewContent extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'TZS 15,000',
                           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -185,7 +183,7 @@ class HomeViewContent extends StatelessWidget {
                         Text('22/8/2025'),
                       ],
                     ),
-                    const Text('25%'),
+                    Text('25%'),
                   ],
                 ),
               ),
@@ -198,7 +196,7 @@ class HomeViewContent extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: viewModel.onFanyaMalipoTapped,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2E7D32),
                       foregroundColor: Colors.white,
@@ -213,7 +211,7 @@ class HomeViewContent extends StatelessWidget {
                 const SizedBox(width: 16),
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: viewModel.onOmbaMkopoTapped,
                     style: OutlinedButton.styleFrom(
                       foregroundColor: const Color(0xFF2E7D32),
                       side: const BorderSide(
@@ -227,7 +225,7 @@ class HomeViewContent extends StatelessWidget {
                     child: const Text('Omba Mkopo'),
                   ),
                 ),
-              ],
+              ]
             ),
             const SizedBox(height: 24),
 
@@ -242,8 +240,8 @@ class HomeViewContent extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
+              child: const Padding(
+                padding: EdgeInsets.symmetric(
                   horizontal: 20.0,
                   vertical: 16.0,
                 ),
@@ -252,7 +250,7 @@ class HomeViewContent extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'TZS 15,000',
                           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -261,7 +259,7 @@ class HomeViewContent extends StatelessWidget {
                         Text('15/8/2025'),
                       ],
                     ),
-                    const Text('25%'),
+                    Text('25%'),
                   ],
                 ),
               ),
@@ -272,8 +270,8 @@ class HomeViewContent extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
+              child: const Padding(
+                padding: EdgeInsets.symmetric(
                   horizontal: 20.0,
                   vertical: 16.0,
                 ),
@@ -282,7 +280,7 @@ class HomeViewContent extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Kiasi: TZS 15,000',
                           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -291,7 +289,7 @@ class HomeViewContent extends StatelessWidget {
                         Text('8/8/2025'),
                       ],
                     ),
-                    const Text('25%'),
+                    Text('25%'),
                   ],
                 ),
               ),
