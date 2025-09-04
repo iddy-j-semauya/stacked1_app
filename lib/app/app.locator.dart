@@ -12,6 +12,7 @@ import 'package:stacked_services/src/navigation/navigation_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 
 import '../ui/views/request_loan/request_loan_viewmodel.dart';
+import '../ui/views/upload_data/upload_data_viewmodel.dart';
 import '../ui/views/wallet/wallet_viewmodel.dart';
 
 final locator = StackedLocator.instance;
@@ -30,4 +31,5 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => NavigationService());
   locator.registerFactory(() => RequestLoanViewModel());
   locator.registerFactory(() => WalletViewModel());
+  locator.registerFactory(() => UploadDataViewModel());
 }
